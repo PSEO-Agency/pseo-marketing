@@ -1,5 +1,4 @@
 import AgencyNavbar from "@/components/agency/AgencyNavbar";
-import AgencyDarkWrapper from "@/components/agency/AgencyDarkWrapper";
 import Footer from "@/components/landing/Footer";
 import AgencyHero from "@/components/agency/AgencyHero";
 import AgencyStats from "@/components/agency/AgencyStats";
@@ -26,39 +25,37 @@ export const metadata: Metadata = {
 
 export default function AgencyPage() {
   return (
-    <AgencyDarkWrapper>
-      <main className="min-h-screen bg-background overflow-hidden">
-        <AgencyNavbar />
-        <AgencyHero />
-        <AgencyStats />
-        <AgencyProcess />
-        <div id="automation">
-          <AgencyAutomation />
-        </div>
-        <div id="services">
-          <AgencyServices />
-        </div>
-        <div id="expertise">
-          <AgencyExpertise />
-        </div>
-        <div id="results">
-          <AgencyRevenueProof />
-        </div>
-        <AgencyTestimonials />
-        <div id="industries">
-          <AgencyIndustries />
-        </div>
-        <AgencyCTA />
-        <div id="team">
-          <AgencyTeam />
-        </div>
-        <div id="blog">
-          <AgencyBlog />
-        </div>
-        <AgencySEOCast />
-        <AgencyTools />
-        <Footer />
-      </main>
-    </AgencyDarkWrapper>
+    <main className="min-h-screen bg-background overflow-hidden">
+      <AgencyNavbar />
+      <AgencyHero />
+      <AgencyStats />
+      <AgencyProcess />
+      <div id="automation">
+        <AgencyAutomation />
+      </div>
+      <div id="services">
+        <AgencyServices />
+      </div>
+      <div id="expertise">
+        <AgencyExpertise />
+      </div>
+      <div id="results">
+        <AgencyRevenueProof />
+      </div>
+      <AgencyTestimonials />
+      <div id="industries">
+        <AgencyIndustries />
+      </div>
+      <AgencyCTA />
+      <div id="team">
+        <AgencyTeam />
+      </div>
+      <div id="blog">
+        <AgencyBlog />
+      </div>
+      <AgencySEOCast />
+      <AgencyTools />
+      <Footer />
+    </main>
   );
 }

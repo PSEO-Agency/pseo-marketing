@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import AgencyDarkWrapper from "@/components/agency/AgencyDarkWrapper";
 
 export const metadata: Metadata = {
   title: {
@@ -14,5 +15,5 @@ export default function AgencyLayout({
 }: {
   children: React.ReactNode;
 }) {
-  return <>{children}</>;
+  return <AgencyDarkWrapper>{children}</AgencyDarkWrapper>;
 }
