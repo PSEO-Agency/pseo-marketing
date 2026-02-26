@@ -94,10 +94,7 @@ export default function HomeHero() {
   const panelT = reducedMotion ? transitionReduced : transitionPanel;
   const contentT = reducedMotion ? transitionReduced : transitionContent;
 
-  const handlePointerEnter = useCallback(
-    (id: ModeId) => setActiveMode(id),
-    [],
-  );
+  const handlePointerEnter = useCallback((id: ModeId) => setActiveMode(id), []);
   const handlePointerLeave = useCallback(() => {
     if (prefersHover) setActiveMode(null);
   }, [prefersHover]);
