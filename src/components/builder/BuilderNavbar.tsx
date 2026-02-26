@@ -1,10 +1,12 @@
 "use client";
 
-import { useState } from "react";
+import { useState, useEffect } from "react";
+import { useTheme } from "next-themes";
 import { motion, AnimatePresence } from "framer-motion";
 import { Menu, X, ArrowRight } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import Link from "next/link";
+import Image from "next/image";
 import ThemeToggle from "@/components/ThemeToggle";
 
 const BUILDER_URL = process.env.NEXT_PUBLIC_BUILDER_URL || "https://app.pseo.nl";
@@ -17,6 +19,17 @@ const navLinks = [
 
 export default function BuilderNavbar() {
   const [isOpen, setIsOpen] = useState(false);
+  const { theme, resolvedTheme } = useTheme();
+  const [mounted, setMounted] = useState(false);
+
+  useEffect(() => setMounted(true), []);
+
+  const isDark = mounted && (resolvedTheme === "dark" || theme === "dark");
+  const logoSrc = mounted
+    ? isDark
+      ? "/landing/builder-logo-light.svg"
+      : "/landing/builder-logo-dark.svg"
+    : "/landing/builder-idle.svg";
 
   return (
     <motion.nav
@@ -27,8 +40,14 @@ export default function BuilderNavbar() {
     >
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between h-16">
-          <Link href="/builder" className="text-xl font-bold text-[hsl(262,83%,58%)]">
-            PSEO Builder
+          <Link href="/builder" className="flex items-center gap-2 shrink-0">
+            <Image
+              src={logoSrc}
+              alt="PSEO Builder"
+              width={198}
+              height={123}
+              className="h-12 w-auto"
+            />
           </Link>
 
           <div className="hidden md:flex items-center gap-8">

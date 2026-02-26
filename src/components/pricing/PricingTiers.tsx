@@ -138,7 +138,7 @@ const tiers = [
   },
   {
     name: "Business",
-    price: "295",
+    price: "495",
     period: "/month",
     description: "Publish and grow with full features",
     color: "hsl(262 83% 58%)",
@@ -180,9 +180,25 @@ const tiers = [
   },
 ];
 
+/** Builder pricing: all 4 tiers; Agency shown as Custom + Schedule a call. */
+const tiersForBuilder = tiers.map((t) =>
+  t.name === "Agency"
+    ? {
+        ...t,
+        price: "Custom" as const,
+        period: "",
+        cta: "Schedule a Call",
+        ctaVariant: "outline" as const,
+        href: "/agency/strategy-call",
+      }
+    : t
+);
+
 function FeatureValue({ value }: { value: boolean | string }) {
   if (value === true)
-    return <Check className="w-4 h-4 text-green-600 dark:text-green-400 mx-auto" />;
+    return (
+      <Check className="w-4 h-4 text-green-600 dark:text-green-400 mx-auto" />
+    );
   if (value === false)
     return <X className="w-4 h-4 text-muted-foreground/30 mx-auto" />;
   if (value === "Coming Soon")
@@ -191,9 +207,7 @@ function FeatureValue({ value }: { value: boolean | string }) {
         Coming Soon
       </span>
     );
-  return (
-    <span className="text-sm text-foreground font-medium">{value}</span>
-  );
+  return <span className="text-sm text-foreground font-medium">{value}</span>;
 }
 
 export default function PricingTiers() {
@@ -201,7 +215,7 @@ export default function PricingTiers() {
     <section className="relative py-16">
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
         <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6 mb-20">
-          {tiers.map((tier, index) => (
+          {tiersForBuilder.map((tier, index) => (
             <motion.div
               key={tier.name}
               initial={{ opacity: 0, y: 30 }}
@@ -225,7 +239,9 @@ export default function PricingTiers() {
                     : ""
                 } flex flex-col`}
               >
-                <div className={`${tier.bgAccent} inline-flex items-center gap-2 px-3 py-1 rounded-full w-fit mb-4`}>
+                <div
+                  className={`${tier.bgAccent} inline-flex items-center gap-2 px-3 py-1 rounded-full w-fit mb-4`}
+                >
                   <span className={`text-sm font-semibold ${tier.textAccent}`}>
                     {tier.name}
                   </span>
@@ -234,14 +250,18 @@ export default function PricingTiers() {
                 <div className="mb-2">
                   {tier.price === "Custom" ? (
                     <div className="flex items-baseline gap-1">
-                      <span className="text-3xl font-bold text-foreground">Custom</span>
+                      <span className="text-3xl font-bold text-foreground">
+                        Custom
+                      </span>
                     </div>
                   ) : (
                     <div className="flex items-baseline gap-1">
                       <span className="text-sm text-muted-foreground">
                         &euro;
                       </span>
-                      <span className="text-4xl font-bold text-foreground">{tier.price}</span>
+                      <span className="text-4xl font-bold text-foreground">
+                        {tier.price}
+                      </span>
                       <span className="text-muted-foreground text-sm">
                         {tier.period}
                       </span>
@@ -258,16 +278,16 @@ export default function PricingTiers() {
                   className={`w-full mt-auto ${
                     tier.popular
                       ? "bg-[hsl(262,83%,58%)] text-white hover:bg-[hsl(262,83%,50%)] shadow-sm"
-                      : tier.name === "Agency"
-                        ? "bg-[hsl(217,91%,60%)] text-white hover:bg-[hsl(217,91%,55%)]"
-                        : tier.name === "Country Partner"
-                          ? "border-[hsl(25,95%,53%)]/50 text-[hsl(25,95%,53%)] hover:bg-[hsl(25,95%,53%)]/5"
+                      : tier.name === "Country Partner"
+                        ? "border-[hsl(25,95%,53%)]/50 text-[hsl(25,95%,53%)] hover:bg-[hsl(25,95%,53%)]/5"
+                        : tier.name === "Agency" && tier.cta === "Schedule a Call"
+                          ? "border-[hsl(217,91%,60%)]/50 text-[hsl(217,91%,60%)] hover:bg-[hsl(217,91%,60%)]/5"
                           : ""
                   }`}
                   asChild
                 >
                   <Link href={tier.href}>
-                    {tier.name === "Country Partner" ? (
+                    {tier.name === "Country Partner" || tier.cta === "Schedule a Call" ? (
                       <>
                         <Phone className="w-4 h-4" />
                         {tier.cta}
@@ -303,7 +323,7 @@ export default function PricingTiers() {
                     <th className="text-left p-4 text-sm font-semibold text-muted-foreground min-w-[200px]">
                       Feature
                     </th>
-                    {tiers.map((tier) => (
+                    {tiersForBuilder.map((tier) => (
                       <th
                         key={tier.name}
                         className="p-4 text-center text-sm font-semibold min-w-[120px]"
@@ -318,11 +338,7 @@ export default function PricingTiers() {
                   {features.map((feature, index) => (
                     <tr
                       key={feature.name}
-                      className={
-                        index % 2 === 0
-                          ? "bg-surface/50"
-                          : ""
-                      }
+                      className={index % 2 === 0 ? "bg-surface/50" : ""}
                     >
                       <td className="p-4 text-sm text-muted-foreground">
                         {feature.name}

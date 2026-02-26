@@ -34,11 +34,8 @@ export default function BuilderHero() {
             className="text-4xl md:text-6xl lg:text-7xl font-bold tracking-tight mb-6 text-foreground"
           >
             Launch Programmatic SEO.{" "}
-            <span className="text-[hsl(262,83%,58%)]">
-              For Free.
-            </span>{" "}
+            <span className="text-[hsl(262,83%,58%)]">At Any Scale.</span>{" "}
             <br className="hidden md:block" />
-            At Any Scale.
           </motion.h1>
 
           <motion.p
