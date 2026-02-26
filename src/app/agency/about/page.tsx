@@ -3,7 +3,12 @@ import Link from "next/link";
 import AgencyPageWrapper from "@/components/agency/AgencyPageWrapper";
 import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
-import { Card, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
+import {
+  Card,
+  CardDescription,
+  CardHeader,
+  CardTitle,
+} from "@/components/ui/card";
 import {
   Users,
   Target,
@@ -18,11 +23,13 @@ import {
 } from "lucide-react";
 
 export const metadata: Metadata = {
-  title: "About pSEO | 15+ Years Scaling Organic Traffic 10x | #1 Agency Results",
+  title:
+    "About pSEO | 15+ Years Scaling Organic Traffic 10x | #1 Agency Results",
   description:
     "Leading pSEO agency with 15+ years expertise helping businesses scale organic traffic 10x faster. 1M+ pages generated, 100+ projects completed, proven automation strategies that deliver results.",
   openGraph: {
-    title: "About pSEO | 15+ Years Scaling Organic Traffic 10x | #1 Agency Results",
+    title:
+      "About pSEO | 15+ Years Scaling Organic Traffic 10x | #1 Agency Results",
     description:
       "Leading pSEO agency with 15+ years expertise helping businesses scale organic traffic 10x faster. 1M+ pages generated, 100+ projects completed.",
     type: "website",
@@ -36,10 +43,30 @@ export const metadata: Metadata = {
 };
 
 const stats = [
-  { number: "1M+", label: "Pages Generated", icon: <TrendingUp className="h-6 w-6" />, color: "text-green-600" },
-  { number: "100+", label: "Projects Completed", icon: <Target className="h-6 w-6" />, color: "text-blue-600" },
-  { number: "10M+", label: "Total Pages Created", icon: <Globe className="h-6 w-6" />, color: "text-purple-600" },
-  { number: "500%", label: "Avg Traffic Growth", icon: <Rocket className="h-6 w-6" />, color: "text-orange-600" },
+  {
+    number: "1M+",
+    label: "Pages Generated",
+    icon: <TrendingUp className="h-6 w-6" />,
+    color: "text-green-600",
+  },
+  {
+    number: "100+",
+    label: "Projects Completed",
+    icon: <Target className="h-6 w-6" />,
+    color: "text-blue-600",
+  },
+  {
+    number: "10M+",
+    label: "Total Pages Created",
+    icon: <Globe className="h-6 w-6" />,
+    color: "text-purple-600",
+  },
+  {
+    number: "500%",
+    label: "Avg Traffic Growth",
+    icon: <Rocket className="h-6 w-6" />,
+    color: "text-orange-600",
+  },
 ];
 
 const coreValues = [
@@ -154,8 +181,9 @@ export default function AboutPage() {
               </span>
             </h1>
             <p className="text-xl lg:text-2xl text-blue-100 mb-12 max-w-3xl mx-auto leading-relaxed">
-              We help businesses automate their SEO operations and scale organic traffic exponentially
-              through advanced programmatic strategies that generate thousands of high-converting pages.
+              We help businesses automate their SEO operations and scale organic
+              traffic exponentially through advanced programmatic strategies
+              that generate thousands of high-converting pages.
             </p>
           </div>
         </div>
@@ -169,7 +197,8 @@ export default function AboutPage() {
               Proven Programmatic SEO Results
             </h2>
             <p className="text-lg text-gray-600 max-w-2xl mx-auto">
-              15+ years of programmatic SEO expertise delivering exponential growth
+              15+ years of programmatic SEO expertise delivering exponential
+              growth
             </p>
           </div>
           <div className="grid grid-cols-2 lg:grid-cols-4 gap-8">
@@ -180,7 +209,9 @@ export default function AboutPage() {
                 >
                   {stat.icon}
                 </div>
-                <div className="text-3xl lg:text-4xl font-bold text-gray-900 mb-2">{stat.number}</div>
+                <div className="text-3xl lg:text-4xl font-bold text-gray-900 mb-2">
+                  {stat.number}
+                </div>
                 <div className="text-gray-600 font-medium">{stat.label}</div>
               </div>
             ))}
@@ -194,25 +225,35 @@ export default function AboutPage() {
           <div className="max-w-6xl mx-auto">
             <div className="grid lg:grid-cols-2 gap-16 items-center">
               <div>
-                <h2 className="text-4xl lg:text-5xl font-bold text-gray-900 mb-8">Our Mission</h2>
+                <h2 className="text-4xl lg:text-5xl font-bold text-gray-900 mb-8">
+                  Our Mission
+                </h2>
                 <p className="text-lg text-gray-600 mb-8 leading-relaxed">
-                  To help businesses <strong>automate their SEO operations</strong> and achieve exponential
-                  organic growth through advanced programmatic strategies. We believe every company deserves
-                  access to sophisticated, scalable SEO automation that eliminates manual work and maximizes
-                  results.
+                  To help businesses{" "}
+                  <strong>automate their SEO operations</strong> and achieve
+                  exponential organic growth through advanced programmatic
+                  strategies. We believe every company deserves access to
+                  sophisticated, scalable SEO automation that eliminates manual
+                  work and maximizes results.
                 </p>
                 <div className="space-y-4">
                   <div className="flex items-center space-x-3">
                     <div className="w-2 h-2 bg-blue-600 rounded-full"></div>
-                    <span className="text-gray-700">15+ years of programmatic SEO expertise</span>
+                    <span className="text-gray-700">
+                      15+ years of programmatic SEO expertise
+                    </span>
                   </div>
                   <div className="flex items-center space-x-3">
                     <div className="w-2 h-2 bg-blue-600 rounded-full"></div>
-                    <span className="text-gray-700">Automated systems that scale from 1K to 25K+ pages</span>
+                    <span className="text-gray-700">
+                      Automated systems that scale from 1K to 25K+ pages
+                    </span>
                   </div>
                   <div className="flex items-center space-x-3">
                     <div className="w-2 h-2 bg-blue-600 rounded-full"></div>
-                    <span className="text-gray-700">Data-driven content generation and optimization</span>
+                    <span className="text-gray-700">
+                      Data-driven content generation and optimization
+                    </span>
                   </div>
                 </div>
               </div>
@@ -239,9 +280,12 @@ export default function AboutPage() {
         <div className="container mx-auto px-4">
           <div className="max-w-6xl mx-auto">
             <div className="text-center mb-16">
-              <h2 className="text-4xl lg:text-5xl font-bold text-gray-900 mb-6">Our Core Values</h2>
+              <h2 className="text-4xl lg:text-5xl font-bold text-gray-900 mb-6">
+                Our Core Values
+              </h2>
               <p className="text-lg text-gray-600 max-w-2xl mx-auto">
-                The principles that drive our programmatic SEO innovation and client success
+                The principles that drive our programmatic SEO innovation and
+                client success
               </p>
             </div>
 
@@ -256,7 +300,9 @@ export default function AboutPage() {
                       <div className="group-hover:scale-110 transition-transform duration-300">
                         {value.icon}
                       </div>
-                      <CardTitle className="text-xl font-bold text-gray-900">{value.title}</CardTitle>
+                      <CardTitle className="text-xl font-bold text-gray-900">
+                        {value.title}
+                      </CardTitle>
                     </div>
                     <CardDescription className="text-gray-600 leading-relaxed">
                       {value.description}
@@ -278,8 +324,8 @@ export default function AboutPage() {
                 Our Programmatic SEO Process
               </h2>
               <p className="text-lg text-gray-600 max-w-3xl mx-auto">
-                Our proven 4-step methodology automates SEO operations and scales organic traffic
-                exponentially
+                Our proven 4-step methodology automates SEO operations and
+                scales organic traffic exponentially
               </p>
             </div>
 
@@ -296,8 +342,12 @@ export default function AboutPage() {
                       </div>
                     </div>
                     <div className="flex-1">
-                      <h3 className="text-xl font-bold text-gray-900 mb-3">{step.title}</h3>
-                      <p className="text-gray-600 leading-relaxed">{step.description}</p>
+                      <h3 className="text-xl font-bold text-gray-900 mb-3">
+                        {step.title}
+                      </h3>
+                      <p className="text-gray-600 leading-relaxed">
+                        {step.description}
+                      </p>
                     </div>
                   </div>
                 </div>
@@ -312,9 +362,12 @@ export default function AboutPage() {
         <div className="container mx-auto px-4">
           <div className="max-w-6xl mx-auto">
             <div className="text-center mb-16">
-              <h2 className="text-4xl lg:text-5xl font-bold text-gray-900 mb-6">Industry Expertise</h2>
+              <h2 className="text-4xl lg:text-5xl font-bold text-gray-900 mb-6">
+                Industry Expertise
+              </h2>
               <p className="text-lg text-gray-600 max-w-2xl mx-auto">
-                Specialized programmatic SEO strategies across multiple verticals
+                Specialized programmatic SEO strategies across multiple
+                verticals
               </p>
             </div>
 
@@ -324,7 +377,9 @@ export default function AboutPage() {
                   key={index}
                   className="bg-white p-4 rounded-lg text-center shadow-sm hover:shadow-md transition-shadow"
                 >
-                  <div className="text-sm font-medium text-gray-700">{industry}</div>
+                  <div className="text-sm font-medium text-gray-700">
+                    {industry}
+                  </div>
                 </div>
               ))}
             </div>
@@ -352,7 +407,9 @@ export default function AboutPage() {
                   className="text-center border-0 shadow-lg hover:shadow-xl transition-all duration-300"
                 >
                   <CardHeader>
-                    <div className={`text-4xl font-bold mb-2 ${result.color}`}>{result.metric}</div>
+                    <div className={`text-4xl font-bold mb-2 ${result.color}`}>
+                      {result.metric}
+                    </div>
                     <CardTitle className="text-lg text-gray-900 font-semibold">
                       {result.description}
                     </CardTitle>
@@ -377,21 +434,28 @@ export default function AboutPage() {
                   SEO Automation Experts
                 </h2>
                 <p className="text-lg text-gray-600 mb-8 leading-relaxed">
-                  Our team of programmatic SEO specialists combines technical expertise with creative
-                  problem-solving to automate your SEO operations and deliver exponential growth.
+                  Our team of programmatic SEO specialists combines technical
+                  expertise with creative problem-solving to automate your SEO
+                  operations and deliver exponential growth.
                 </p>
                 <div className="space-y-4">
                   <div className="flex items-center space-x-3">
                     <div className="w-2 h-2 bg-blue-600 rounded-full"></div>
-                    <span className="text-gray-700">AI & Machine Learning specialists</span>
+                    <span className="text-gray-700">
+                      AI & Machine Learning specialists
+                    </span>
                   </div>
                   <div className="flex items-center space-x-3">
                     <div className="w-2 h-2 bg-blue-600 rounded-full"></div>
-                    <span className="text-gray-700">Database architecture & development integration</span>
+                    <span className="text-gray-700">
+                      Database architecture & development integration
+                    </span>
                   </div>
                   <div className="flex items-center space-x-3">
                     <div className="w-2 h-2 bg-blue-600 rounded-full"></div>
-                    <span className="text-gray-700">Remote-first culture serving global clients</span>
+                    <span className="text-gray-700">
+                      Remote-first culture serving global clients
+                    </span>
                   </div>
                 </div>
               </div>

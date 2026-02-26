@@ -1,7 +1,7 @@
 "use client";
 
 import AgencyNavbar from "./AgencyNavbar";
-import Footer from "@/components/landing/Footer";
+import AgencyFooter from "./AgencyFooter";
 
 export default function AgencyPageWrapper({
   children,
@@ -9,10 +9,10 @@ export default function AgencyPageWrapper({
   children: React.ReactNode;
 }) {
   return (
-    <div className="min-h-screen bg-background text-foreground">
+    <div className="min-h-screen bg-white text-gray-900">
       <AgencyNavbar />
-      <div className="pt-16">{children}</div>
-      <Footer />
+      <div>{children}</div>
+      <AgencyFooter />
     </div>
   );
 }

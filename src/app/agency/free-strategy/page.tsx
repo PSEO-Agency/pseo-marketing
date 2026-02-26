@@ -1,7 +1,13 @@
 import type { Metadata } from "next";
 import Script from "next/script";
 import AgencyPageWrapper from "@/components/agency/AgencyPageWrapper";
-import { CheckCircle2, Star, TrendingUp, Target, BarChart3 } from "lucide-react";
+import {
+  CheckCircle2,
+  Star,
+  TrendingUp,
+  Target,
+  BarChart3,
+} from "lucide-react";
 
 export const metadata: Metadata = {
   title: "Free pSEO Strategy Session | Programmatic SEO Agency",
@@ -12,7 +18,10 @@ export const metadata: Metadata = {
 export default function FreeStrategyPage() {
   return (
     <AgencyPageWrapper>
-      <Script src="https://link.wellplan.io/js/form_embed.js" strategy="lazyOnload" />
+      <Script
+        src="https://link.wellplan.io/js/form_embed.js"
+        strategy="lazyOnload"
+      />
 
       {/* Hero Section */}
       <section className="bg-gradient-to-br from-slate-900 via-blue-900 to-indigo-900 text-white py-20">
@@ -25,8 +34,8 @@ export default function FreeStrategyPage() {
               </span>
             </h1>
             <p className="text-xl text-blue-100 mb-8 leading-relaxed">
-              Discover how programmatic SEO can 10X your organic traffic with a personalized strategy
-              session
+              Discover how programmatic SEO can 10X your organic traffic with a
+              personalized strategy session
             </p>
 
             {/* Trust indicators */}
@@ -37,11 +46,15 @@ export default function FreeStrategyPage() {
               </div>
               <div className="flex items-center bg-white/10 backdrop-blur-sm rounded-full px-6 py-3 border border-white/20">
                 <Star className="h-5 w-5 text-yellow-400 mr-2" />
-                <span className="text-blue-200 font-medium">Expert Analysis</span>
+                <span className="text-blue-200 font-medium">
+                  Expert Analysis
+                </span>
               </div>
               <div className="flex items-center bg-white/10 backdrop-blur-sm rounded-full px-6 py-3 border border-white/20">
                 <TrendingUp className="h-5 w-5 text-blue-400 mr-2" />
-                <span className="text-blue-200 font-medium">Actionable Insights</span>
+                <span className="text-blue-200 font-medium">
+                  Actionable Insights
+                </span>
               </div>
             </div>
           </div>
@@ -68,8 +81,8 @@ export default function FreeStrategyPage() {
                       Keyword Opportunity Analysis
                     </h3>
                     <p className="text-gray-600">
-                      Identify high-volume, low-competition keywords specific to your domain and
-                      industry
+                      Identify high-volume, low-competition keywords specific to
+                      your domain and industry
                     </p>
                   </div>
                 </div>
@@ -79,10 +92,12 @@ export default function FreeStrategyPage() {
                     <BarChart3 className="h-6 w-6 text-white" />
                   </div>
                   <div>
-                    <h3 className="text-xl font-bold text-gray-900 mb-2">Traffic Growth Potential</h3>
+                    <h3 className="text-xl font-bold text-gray-900 mb-2">
+                      Traffic Growth Potential
+                    </h3>
                     <p className="text-gray-600">
-                      Get realistic projections of organic traffic growth with programmatic SEO
-                      implementation
+                      Get realistic projections of organic traffic growth with
+                      programmatic SEO implementation
                     </p>
                   </div>
                 </div>
@@ -92,10 +107,12 @@ export default function FreeStrategyPage() {
                     <TrendingUp className="h-6 w-6 text-white" />
                   </div>
                   <div>
-                    <h3 className="text-xl font-bold text-gray-900 mb-2">Competitor Gap Analysis</h3>
+                    <h3 className="text-xl font-bold text-gray-900 mb-2">
+                      Competitor Gap Analysis
+                    </h3>
                     <p className="text-gray-600">
-                      Discover what your competitors are missing and how to capitalize on those
-                      opportunities
+                      Discover what your competitors are missing and how to
+                      capitalize on those opportunities
                     </p>
                   </div>
                 </div>
@@ -109,7 +126,8 @@ export default function FreeStrategyPage() {
                       Custom Implementation Roadmap
                     </h3>
                     <p className="text-gray-600">
-                      Step-by-step plan tailored to your business goals and technical requirements
+                      Step-by-step plan tailored to your business goals and
+                      technical requirements
                     </p>
                   </div>
                 </div>
@@ -125,12 +143,19 @@ export default function FreeStrategyPage() {
 
             {/* Right: Form */}
             <div className="bg-white rounded-2xl shadow-2xl p-8 border border-gray-100">
-              <h3 className="text-2xl font-bold text-gray-900 mb-6">Get Started Today</h3>
+              <h3 className="text-2xl font-bold text-gray-900 mb-6">
+                Get Started Today
+              </h3>
 
               <div className="space-y-6">
                 <iframe
                   src="https://link.wellplan.io/widget/form/WczCC8B7OrZF7PQKMQR9"
-                  style={{ width: "100%", height: "944px", border: "none", borderRadius: "4px" }}
+                  style={{
+                    width: "100%",
+                    height: "944px",
+                    border: "none",
+                    borderRadius: "4px",
+                  }}
                   id="inline-WczCC8B7OrZF7PQKMQR9"
                   data-layout="{'id':'INLINE'}"
                   data-trigger-type="alwaysShow"

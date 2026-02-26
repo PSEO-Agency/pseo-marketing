@@ -101,9 +101,7 @@ export default function ToolDetailPage() {
 
   const features = Array.isArray(tool.features)
     ? (tool.features as Record<string, unknown>[]).filter(
-        (
-          feature,
-        ): feature is { name: string; description: string } =>
+        (feature): feature is { name: string; description: string } =>
           typeof feature === "object" &&
           feature !== null &&
           typeof feature.name === "string" &&

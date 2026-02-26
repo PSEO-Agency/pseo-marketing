@@ -14,14 +14,14 @@ import {
   Play,
   BookOpen,
   Users,
-  Zap
+  Zap,
 } from "lucide-react";
 
 interface ImplementationExample {
   title: string;
   description: string;
   code: string;
-  complexity: 'Beginner' | 'Intermediate' | 'Advanced';
+  complexity: "Beginner" | "Intermediate" | "Advanced";
   timeEstimate: string;
 }
 
@@ -41,12 +41,12 @@ export const SoftwareImplementation = ({
   setupGuide,
   implementationExamples,
   migrationGuide,
-  supportResources
+  supportResources,
 }: SoftwareImplementationProps) => {
   const complexityColors = {
-    'Beginner': 'bg-green-100 text-green-700',
-    'Intermediate': 'bg-yellow-100 text-yellow-700',
-    'Advanced': 'bg-red-100 text-red-700'
+    Beginner: "bg-green-100 text-green-700",
+    Intermediate: "bg-yellow-100 text-yellow-700",
+    Advanced: "bg-red-100 text-red-700",
   };
 
   return (
@@ -57,7 +57,8 @@ export const SoftwareImplementation = ({
             Implementation Guide
           </h2>
           <p className="text-lg text-gray-600 max-w-2xl mx-auto">
-            Step-by-step instructions and examples to get you up and running with programmatic SEO
+            Step-by-step instructions and examples to get you up and running
+            with programmatic SEO
           </p>
         </div>
 
@@ -95,12 +96,12 @@ export const SoftwareImplementation = ({
               <CardContent>
                 <div className="space-y-4">
                   {[
-                    'Install and configure the platform',
-                    'Set up your content templates',
-                    'Connect your data sources',
-                    'Configure SEO settings',
-                    'Test your first programmatic pages',
-                    'Deploy and monitor performance'
+                    "Install and configure the platform",
+                    "Set up your content templates",
+                    "Connect your data sources",
+                    "Configure SEO settings",
+                    "Test your first programmatic pages",
+                    "Deploy and monitor performance",
                   ].map((step, index) => (
                     <div key={index} className="flex items-center">
                       <div className="w-8 h-8 bg-blue-100 text-blue-600 rounded-full flex items-center justify-center font-semibold text-sm mr-4">
@@ -131,7 +132,9 @@ export const SoftwareImplementation = ({
                         </Badge>
                       </div>
                     </div>
-                    <p className="text-gray-600 text-sm">{example.description}</p>
+                    <p className="text-gray-600 text-sm">
+                      {example.description}
+                    </p>
                   </CardHeader>
                   <CardContent>
                     <div className="bg-gray-900 rounded-lg p-4 overflow-x-auto">
@@ -197,7 +200,11 @@ export const SoftwareImplementation = ({
                     </Button>
                   )}
                   {supportResources.tutorials?.map((tutorial, index) => (
-                    <Button key={index} variant="outline" className="w-full justify-start">
+                    <Button
+                      key={index}
+                      variant="outline"
+                      className="w-full justify-start"
+                    >
                       <Play className="h-4 w-4 mr-2" />
                       {tutorial}
                     </Button>

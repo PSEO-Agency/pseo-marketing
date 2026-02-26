@@ -9,7 +9,7 @@ const slideTypeStyles: Record<string, { bg: string; accent: string }> = {
   inputs: { bg: 'from-slate-900 via-blue-900 to-blue-800', accent: 'text-sky-400' },
   engine: { bg: 'from-slate-900 via-indigo-900 to-purple-900', accent: 'text-purple-400' },
   results: { bg: 'from-slate-900 via-blue-900 to-emerald-900', accent: 'text-emerald-400' },
-  cta: { bg: 'from-orange-600 via-orange-500 to-amber-500', accent: 'text-white' },
+  cta: { bg: 'from-orange-600 via-orange-500 to-amber-500', accent: 'text-gray-900' },
 };
 
 const SINGLE_IMAGE_WIDTH = 1200;
@@ -49,7 +49,7 @@ export const ImageDownloader: React.FC<ImageDownloaderProps> = ({ slides, postSl
                       <div className="absolute -top-16 -right-16 w-64 h-64 bg-blue-500/20 rounded-full blur-3xl" />
                       <div className="absolute -bottom-16 -left-16 w-48 h-48 bg-purple-500/20 rounded-full blur-3xl" />
 
-                      <div className="relative z-10 text-center text-white max-w-4xl">
+                      <div className="relative z-10 text-center text-gray-900 max-w-4xl">
                         <div className="text-6xl mb-4">{slide.icon}</div>
                         <h3 className="text-4xl font-bold mb-4">{slide.title}</h3>
                         {slide.subtitle && (

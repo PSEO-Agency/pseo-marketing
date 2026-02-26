@@ -19,15 +19,19 @@ export const SoftwareFeatures = ({ features }: SoftwareFeaturesProps) => {
         <div className="text-center mb-16">
           <div className="inline-flex items-center bg-blue-50 rounded-full px-6 py-3 mb-8 border border-blue-100">
             <Zap className="h-5 w-5 text-blue-600 mr-2" />
-            <span className="text-blue-700 text-sm font-bold">POWERFUL FEATURES</span>
+            <span className="text-blue-700 text-sm font-bold">
+              POWERFUL FEATURES
+            </span>
           </div>
 
           <h2 className="text-4xl lg:text-5xl font-black text-gray-900 mb-8 leading-tight">
-            Everything You Need to <span className="webfx-text-gradient">Scale SEO</span>
+            Everything You Need to{" "}
+            <span className="webfx-text-gradient">Scale SEO</span>
           </h2>
 
           <p className="text-xl text-gray-600 max-w-3xl mx-auto leading-relaxed">
-            Comprehensive tools and features designed to automate and optimize your programmatic SEO workflow.
+            Comprehensive tools and features designed to automate and optimize
+            your programmatic SEO workflow.
           </p>
         </div>
 
@@ -40,13 +44,18 @@ export const SoftwareFeatures = ({ features }: SoftwareFeaturesProps) => {
               "from-purple-500 to-purple-600",
               "from-green-500 to-green-600",
               "from-orange-500 to-red-500",
-              "from-pink-500 to-rose-500"
+              "from-pink-500 to-rose-500",
             ];
 
             return (
-              <Card key={index} className="webfx-card p-6 group hover:scale-105 transition-all duration-300 border-0 shadow-lg hover:shadow-2xl">
+              <Card
+                key={index}
+                className="webfx-card p-6 group hover:scale-105 transition-all duration-300 border-0 shadow-lg hover:shadow-2xl"
+              >
                 <CardContent className="p-0">
-                  <div className={`w-16 h-16 bg-gradient-to-br ${colors[index % colors.length]} rounded-2xl flex items-center justify-center mb-6 shadow-lg group-hover:shadow-xl transition-all duration-300`}>
+                  <div
+                    className={`w-16 h-16 bg-gradient-to-br ${colors[index % colors.length]} rounded-2xl flex items-center justify-center mb-6 shadow-lg group-hover:shadow-xl transition-all duration-300`}
+                  >
                     <IconComponent className="h-8 w-8 text-white" />
                   </div>
                   <h3 className="text-xl font-bold text-gray-900 mb-4 group-hover:text-blue-600 transition-colors duration-200">

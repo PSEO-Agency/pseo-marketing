@@ -71,7 +71,7 @@ export default function LinkedContentPostPage() {
   if (isLoading) {
     return (
       <AgencyPageWrapper>
-        <main className="min-h-screen bg-background pt-24 pb-16">
+        <main className="min-h-screen bg-white pt-24 pb-16">
           <div className="container mx-auto px-4">
             <Skeleton className="h-8 w-48 mb-8" />
             <Skeleton className="h-12 w-3/4 mb-4" />
@@ -86,7 +86,7 @@ export default function LinkedContentPostPage() {
   if (error || !post) {
     return (
       <AgencyPageWrapper>
-        <main className="min-h-screen bg-background pt-24 pb-16">
+        <main className="min-h-screen bg-white pt-24 pb-16">
           <div className="container mx-auto px-4 text-center">
             <h1 className="text-2xl font-bold mb-4">Post not found</h1>
             <Link href="/agency/linked-content">
@@ -107,7 +107,7 @@ export default function LinkedContentPostPage() {
 
   return (
     <AgencyPageWrapper>
-      <main className="min-h-screen bg-background pt-24 pb-16">
+      <main className="min-h-screen bg-white pt-24 pb-16">
         <div className="container mx-auto px-4">
           {/* Back link */}
           <Link href="/agency/linked-content">
@@ -136,10 +136,7 @@ export default function LinkedContentPostPage() {
                 <Image className="h-4 w-4" />
                 Images
               </TabsTrigger>
-              <TabsTrigger
-                value="carousel"
-                className="flex items-center gap-2"
-              >
+              <TabsTrigger value="carousel" className="flex items-center gap-2">
                 <Layers className="h-4 w-4" />
                 Carousel
               </TabsTrigger>
@@ -155,10 +152,7 @@ export default function LinkedContentPostPage() {
 
             <TabsContent value="images">
               {carouselSlides.length > 0 ? (
-                <ImageDownloader
-                  slides={carouselSlides}
-                  postSlug={post.slug}
-                />
+                <ImageDownloader slides={carouselSlides} postSlug={post.slug} />
               ) : (
                 <p className="text-muted-foreground text-center py-12">
                   No images available for this post.
@@ -168,10 +162,7 @@ export default function LinkedContentPostPage() {
 
             <TabsContent value="carousel">
               {carouselSlides.length > 0 ? (
-                <CarouselPreview
-                  slides={carouselSlides}
-                  postSlug={post.slug}
-                />
+                <CarouselPreview slides={carouselSlides} postSlug={post.slug} />
               ) : (
                 <p className="text-muted-foreground text-center py-12">
                   No carousel slides available for this post.

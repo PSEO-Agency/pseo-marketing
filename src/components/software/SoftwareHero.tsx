@@ -1,6 +1,13 @@
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
-import { Star, ExternalLink, Github, FileText, Award, Clock } from "lucide-react";
+import {
+  Star,
+  ExternalLink,
+  Github,
+  FileText,
+  Award,
+  Clock,
+} from "lucide-react";
 
 interface SoftwareHeroProps {
   software: {
@@ -34,7 +41,10 @@ export const SoftwareHero = ({ software }: SoftwareHeroProps) => {
           <div>
             <div className="flex items-center space-x-3 mb-6">
               {software.category && (
-                <Badge variant="secondary" className="text-blue-600 bg-blue-100 border-blue-200 px-4 py-2">
+                <Badge
+                  variant="secondary"
+                  className="text-blue-600 bg-blue-100 border-blue-200 px-4 py-2"
+                >
                   {software.category}
                 </Badge>
               )}
@@ -58,44 +68,78 @@ export const SoftwareHero = ({ software }: SoftwareHeroProps) => {
               {software.user_rating && (
                 <div className="flex items-center">
                   <Star className="h-5 w-5 text-yellow-500 fill-current mr-2" />
-                  <span className="font-semibold text-gray-900">{software.user_rating}</span>
-                  <span className="text-gray-600 ml-1">({software.review_count} reviews)</span>
+                  <span className="font-semibold text-gray-900">
+                    {software.user_rating}
+                  </span>
+                  <span className="text-gray-600 ml-1">
+                    ({software.review_count} reviews)
+                  </span>
                 </div>
               )}
               {software.setup_time && (
                 <div className="flex items-center">
                   <Clock className="h-5 w-5 text-blue-500 mr-2" />
-                  <span className="text-gray-700">Setup: {software.setup_time}</span>
+                  <span className="text-gray-700">
+                    Setup: {software.setup_time}
+                  </span>
                 </div>
               )}
               {software.difficulty_level && (
                 <div className="flex items-center">
                   <Award className="h-5 w-5 text-green-500 mr-2" />
-                  <span className="text-gray-700">{software.difficulty_level} Level</span>
+                  <span className="text-gray-700">
+                    {software.difficulty_level} Level
+                  </span>
                 </div>
               )}
             </div>
 
             <div className="flex flex-wrap gap-4">
               {software.demo_url && (
-                <Button size="lg" className="webfx-button-primary shadow-lg hover:shadow-xl transition-all duration-300 px-8 py-4" asChild>
-                  <a href={software.demo_url} target="_blank" rel="noopener noreferrer">
+                <Button
+                  size="lg"
+                  className="webfx-button-primary shadow-lg hover:shadow-xl transition-all duration-300 px-8 py-4"
+                  asChild
+                >
+                  <a
+                    href={software.demo_url}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
                     <ExternalLink className="h-5 w-5 mr-2" />
                     Try Live Demo
                   </a>
                 </Button>
               )}
               {software.github_url && (
-                <Button size="lg" variant="outline" className="border-2 hover:bg-gray-50 px-8 py-4" asChild>
-                  <a href={software.github_url} target="_blank" rel="noopener noreferrer">
+                <Button
+                  size="lg"
+                  variant="outline"
+                  className="border-2 hover:bg-gray-50 px-8 py-4"
+                  asChild
+                >
+                  <a
+                    href={software.github_url}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
                     <Github className="h-5 w-5 mr-2" />
                     View Source
                   </a>
                 </Button>
               )}
               {software.documentation_url && (
-                <Button size="lg" variant="outline" className="border-2 hover:bg-gray-50 px-8 py-4" asChild>
-                  <a href={software.documentation_url} target="_blank" rel="noopener noreferrer">
+                <Button
+                  size="lg"
+                  variant="outline"
+                  className="border-2 hover:bg-gray-50 px-8 py-4"
+                  asChild
+                >
+                  <a
+                    href={software.documentation_url}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
                     <FileText className="h-5 w-5 mr-2" />
                     Documentation
                   </a>
@@ -124,7 +168,9 @@ export const SoftwareHero = ({ software }: SoftwareHeroProps) => {
                       <div className="text-2xl font-bold text-gray-900">
                         {software.popularity_score || 0}
                       </div>
-                      <div className="text-sm text-gray-600">Popularity Score</div>
+                      <div className="text-sm text-gray-600">
+                        Popularity Score
+                      </div>
                     </div>
                     <div>
                       <div className="text-2xl font-bold text-gray-900">

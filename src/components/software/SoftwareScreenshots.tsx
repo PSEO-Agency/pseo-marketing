@@ -19,7 +19,10 @@ interface SoftwareScreenshotsProps {
   title: string;
 }
 
-export const SoftwareScreenshots = ({ screenshots, title }: SoftwareScreenshotsProps) => {
+export const SoftwareScreenshots = ({
+  screenshots,
+  title,
+}: SoftwareScreenshotsProps) => {
   const [selectedImage, setSelectedImage] = useState<string>("");
 
   if (!screenshots || screenshots.length === 0) return null;
@@ -32,13 +35,17 @@ export const SoftwareScreenshots = ({ screenshots, title }: SoftwareScreenshotsP
             {title} in Action
           </h2>
           <p className="text-lg text-gray-600 max-w-2xl mx-auto">
-            Explore the interface and features that make {title} perfect for programmatic SEO
+            Explore the interface and features that make {title} perfect for
+            programmatic SEO
           </p>
         </div>
 
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
           {screenshots.map((screenshot, index) => (
-            <Card key={index} className="group hover:shadow-xl transition-all duration-300 overflow-hidden">
+            <Card
+              key={index}
+              className="group hover:shadow-xl transition-all duration-300 overflow-hidden"
+            >
               <div className="relative">
                 <img
                   src={screenshot.url}

@@ -2,7 +2,13 @@ import type { Metadata } from "next";
 import Script from "next/script";
 import AgencyPageWrapper from "@/components/agency/AgencyPageWrapper";
 import { Badge } from "@/components/ui/badge";
-import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
+import {
+  Card,
+  CardContent,
+  CardDescription,
+  CardHeader,
+  CardTitle,
+} from "@/components/ui/card";
 import { Phone, Mail, MapPin, MessageCircle, Users, Zap } from "lucide-react";
 
 export const metadata: Metadata = {
@@ -65,7 +71,10 @@ const features = [
 export default function ContactPage() {
   return (
     <AgencyPageWrapper>
-      <Script src="https://link.wellplan.io/js/form_embed.js" strategy="lazyOnload" />
+      <Script
+        src="https://link.wellplan.io/js/form_embed.js"
+        strategy="lazyOnload"
+      />
 
       {/* Hero Section */}
       <section className="relative bg-gradient-to-br from-blue-900 via-blue-800 to-indigo-900 text-white py-24 overflow-hidden">
@@ -83,8 +92,8 @@ export default function ContactPage() {
               </span>
             </h1>
             <p className="text-xl lg:text-2xl text-blue-100 mb-12 max-w-3xl mx-auto leading-relaxed">
-              Ready to unlock exponential organic growth? Our team of programmatic SEO experts
-              is here to help you dominate your market.
+              Ready to unlock exponential organic growth? Our team of
+              programmatic SEO experts is here to help you dominate your market.
             </p>
           </div>
         </div>
@@ -99,7 +108,9 @@ export default function ContactPage() {
                 <div className="inline-flex items-center justify-center w-16 h-16 bg-white rounded-full shadow-lg mb-6 group-hover:shadow-xl transition-all duration-300">
                   {feature.icon}
                 </div>
-                <h3 className="text-xl font-bold text-gray-900 mb-3">{feature.title}</h3>
+                <h3 className="text-xl font-bold text-gray-900 mb-3">
+                  {feature.title}
+                </h3>
                 <p className="text-gray-600">{feature.description}</p>
               </div>
             ))}
@@ -112,10 +123,12 @@ export default function ContactPage() {
         <div className="container mx-auto px-4">
           <div className="max-w-6xl mx-auto">
             <div className="text-center mb-16">
-              <h2 className="text-4xl lg:text-5xl font-bold text-gray-900 mb-6">Get In Touch</h2>
+              <h2 className="text-4xl lg:text-5xl font-bold text-gray-900 mb-6">
+                Get In Touch
+              </h2>
               <p className="text-lg text-gray-600 max-w-2xl mx-auto">
-                Ready to scale your business with programmatic SEO? Let&apos;s discuss your goals and
-                create a custom strategy.
+                Ready to scale your business with programmatic SEO? Let&apos;s
+                discuss your goals and create a custom strategy.
               </p>
             </div>
 
@@ -128,14 +141,20 @@ export default function ContactPage() {
                       Send us a message
                     </CardTitle>
                     <CardDescription className="text-gray-600">
-                      Fill out the form below and we&apos;ll get back to you within 2 hours.
+                      Fill out the form below and we&apos;ll get back to you
+                      within 2 hours.
                     </CardDescription>
                   </CardHeader>
                   <CardContent>
                     <div className="space-y-6">
                       <iframe
                         src="https://link.wellplan.io/widget/form/nKE2NfiNMxPS21X3SLlZ"
-                        style={{ width: "100%", height: "635px", border: "none", borderRadius: "4px" }}
+                        style={{
+                          width: "100%",
+                          height: "635px",
+                          border: "none",
+                          borderRadius: "4px",
+                        }}
                         id="inline-nKE2NfiNMxPS21X3SLlZ"
                         data-layout="{'id':'INLINE'}"
                         data-trigger-type="alwaysShow"
@@ -159,16 +178,25 @@ export default function ContactPage() {
               <div className="lg:col-span-2 space-y-8">
                 <div className="space-y-6">
                   {contactMethods.map((method, index) => (
-                    <Card key={index} className="hover:shadow-lg transition-shadow duration-300">
+                    <Card
+                      key={index}
+                      className="hover:shadow-lg transition-shadow duration-300"
+                    >
                       <CardContent className="p-6">
                         <div className="flex items-start space-x-4">
                           <div className="w-12 h-12 bg-gray-100 rounded-lg flex items-center justify-center flex-shrink-0">
                             {method.icon}
                           </div>
                           <div>
-                            <h3 className="font-semibold text-gray-900 mb-1">{method.title}</h3>
-                            <p className="text-gray-900 font-medium mb-1">{method.content}</p>
-                            <p className="text-sm text-gray-600">{method.description}</p>
+                            <h3 className="font-semibold text-gray-900 mb-1">
+                              {method.title}
+                            </h3>
+                            <p className="text-gray-900 font-medium mb-1">
+                              {method.content}
+                            </p>
+                            <p className="text-sm text-gray-600">
+                              {method.description}
+                            </p>
                           </div>
                         </div>
                       </CardContent>
@@ -183,7 +211,9 @@ export default function ContactPage() {
                           <MapPin className="h-6 w-6 text-purple-600" />
                         </div>
                         <div>
-                          <h3 className="font-semibold text-gray-900 mb-1">Office Address</h3>
+                          <h3 className="font-semibold text-gray-900 mb-1">
+                            Office Address
+                          </h3>
                           <div className="text-gray-900 font-medium mb-1">
                             <div>Programmatic SEO B.V.</div>
                             <div>Brouwerijstraat 1</div>

@@ -1,5 +1,5 @@
 import AgencyNavbar from "@/components/agency/AgencyNavbar";
-import Footer from "@/components/landing/Footer";
+import AgencyFooter from "@/components/agency/AgencyFooter";
 import AgencyHero from "@/components/agency/AgencyHero";
 import AgencyStats from "@/components/agency/AgencyStats";
 import AgencyProcess from "@/components/agency/AgencyProcess";
@@ -25,7 +25,7 @@ export const metadata: Metadata = {
 
 export default function AgencyPage() {
   return (
-    <main className="min-h-screen bg-background overflow-hidden">
+    <main className="min-h-screen bg-white overflow-hidden">
       <AgencyNavbar />
       <AgencyHero />
       <AgencyStats />
@@ -55,7 +55,7 @@ export default function AgencyPage() {
       </div>
       <AgencySEOCast />
       <AgencyTools />
-      <Footer />
+      <AgencyFooter />
     </main>
   );
 }

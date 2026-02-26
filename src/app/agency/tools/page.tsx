@@ -59,9 +59,8 @@ export default function ToolsCollectionPage() {
               </div>
 
               <h1 className="text-4xl lg:text-6xl font-black text-gray-900 mb-8 leading-tight">
-                Essential{" "}
-                <span className="webfx-text-gradient">SEO Tools</span> for
-                Success
+                Essential <span className="webfx-text-gradient">SEO Tools</span>{" "}
+                for Success
               </h1>
 
               <p className="text-xl lg:text-2xl text-gray-600 leading-relaxed mb-12">
@@ -117,11 +116,7 @@ export default function ToolsCollectionPage() {
 
               <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
                 {featuredTools.map((item) => (
-                  <SoftwareCard
-                    key={item.id}
-                    software={item}
-                    featured={true}
-                  />
+                  <SoftwareCard key={item.id} software={item} featured={true} />
                 ))}
               </div>
             </div>

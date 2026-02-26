@@ -86,8 +86,9 @@ export default function ResultsPage() {
               </span>
             </h1>
             <p className="text-xl lg:text-2xl text-blue-100 mb-12 max-w-3xl mx-auto leading-relaxed">
-              Our programmatic SEO strategies have delivered exceptional results for businesses
-              across various industries. See the measurable impact we can make for your business.
+              Our programmatic SEO strategies have delivered exceptional results
+              for businesses across various industries. See the measurable
+              impact we can make for your business.
             </p>
 
             {/* Hero Stats */}
@@ -97,7 +98,9 @@ export default function ResultsPage() {
                   key={index}
                   className="bg-white/10 backdrop-blur-sm rounded-lg p-6 border border-white/20"
                 >
-                  <div className="text-3xl lg:text-4xl font-bold mb-2">{stat.number}</div>
+                  <div className="text-3xl lg:text-4xl font-bold mb-2">
+                    {stat.number}
+                  </div>
                   <div className="text-sm text-blue-200">{stat.label}</div>
                 </div>
               ))}
@@ -123,7 +126,8 @@ export default function ResultsPage() {
                 The Numbers Don&apos;t Lie
               </h2>
               <p className="text-lg text-gray-600 max-w-2xl mx-auto">
-                Real metrics from real clients who trusted us to transform their online presence
+                Real metrics from real clients who trusted us to transform their
+                online presence
               </p>
             </div>
 
@@ -135,14 +139,26 @@ export default function ResultsPage() {
                 </h3>
                 <div className="grid md:grid-cols-2 gap-8 text-left mb-12">
                   <div className="border-l-4 border-green-500 pl-6">
-                    <div className="text-3xl font-bold text-green-600 mb-2">500%</div>
-                    <div className="text-gray-700 font-medium mb-2">Traffic Increase</div>
-                    <div className="text-sm text-gray-600">Local Business client in 6 months</div>
+                    <div className="text-3xl font-bold text-green-600 mb-2">
+                      500%
+                    </div>
+                    <div className="text-gray-700 font-medium mb-2">
+                      Traffic Increase
+                    </div>
+                    <div className="text-sm text-gray-600">
+                      Local Business client in 6 months
+                    </div>
                   </div>
                   <div className="border-l-4 border-blue-500 pl-6">
-                    <div className="text-3xl font-bold text-blue-600 mb-2">2K</div>
-                    <div className="text-gray-700 font-medium mb-2">Pages Created</div>
-                    <div className="text-sm text-gray-600">Long-tail keyword scaling</div>
+                    <div className="text-3xl font-bold text-blue-600 mb-2">
+                      2K
+                    </div>
+                    <div className="text-gray-700 font-medium mb-2">
+                      Pages Created
+                    </div>
+                    <div className="text-sm text-gray-600">
+                      Long-tail keyword scaling
+                    </div>
                   </div>
                 </div>
 
@@ -154,7 +170,9 @@ export default function ResultsPage() {
                       className="w-full h-auto"
                     />
                     <div className="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black/80 to-transparent p-6">
-                      <div className="text-white text-xl font-bold">Real project example</div>
+                      <div className="text-white text-xl font-bold">
+                        Real project example
+                      </div>
                     </div>
                   </div>
                 </div>
@@ -169,10 +187,13 @@ export default function ResultsPage() {
         <div className="container mx-auto px-4">
           <div className="max-w-6xl mx-auto">
             <div className="text-center mb-16">
-              <h2 className="text-4xl lg:text-5xl font-bold text-gray-900 mb-6">Success Stories</h2>
+              <h2 className="text-4xl lg:text-5xl font-bold text-gray-900 mb-6">
+                Success Stories
+              </h2>
               <p className="text-lg text-gray-600 max-w-2xl mx-auto">
-                Real results from real businesses. See how our programmatic SEO strategies have
-                transformed these companies&apos; online presence and revenue.
+                Real results from real businesses. See how our programmatic SEO
+                strategies have transformed these companies&apos; online
+                presence and revenue.
               </p>
             </div>
 
@@ -187,10 +208,14 @@ export default function ResultsPage() {
                     <div className="grid lg:grid-cols-3 gap-8">
                       <div className="lg:col-span-2">
                         <div className="flex items-center gap-4 mb-6">
-                          <Badge className="bg-gray-100 text-gray-800">{study.industry}</Badge>
+                          <Badge className="bg-gray-100 text-gray-800">
+                            {study.industry}
+                          </Badge>
                           <Badge variant="outline">{study.timeframe}</Badge>
                         </div>
-                        <h3 className="text-2xl font-bold text-gray-900 mb-4">{study.client}</h3>
+                        <h3 className="text-2xl font-bold text-gray-900 mb-4">
+                          {study.client}
+                        </h3>
 
                         <div className="space-y-4">
                           <div>
@@ -212,7 +237,9 @@ export default function ResultsPage() {
                       </div>
 
                       <div className="lg:border-l lg:pl-8">
-                        <h4 className="font-semibold text-gray-700 mb-4">Key Metrics</h4>
+                        <h4 className="font-semibold text-gray-700 mb-4">
+                          Key Metrics
+                        </h4>
                         <div className="space-y-3">
                           {Object.entries(study.metrics).map(([key, value]) => (
                             <div
@@ -222,7 +249,9 @@ export default function ResultsPage() {
                               <span className="text-sm font-medium text-gray-600 capitalize">
                                 {key}
                               </span>
-                              <span className="font-bold text-gray-900">{value}</span>
+                              <span className="font-bold text-gray-900">
+                                {value}
+                              </span>
                             </div>
                           ))}
                         </div>
@@ -244,8 +273,8 @@ export default function ResultsPage() {
               Join the Success Stories
             </h2>
             <p className="text-lg text-gray-600 mb-12">
-              With experience in over 100 Programmatic SEO projects, know how to scale your organic
-              growth
+              With experience in over 100 Programmatic SEO projects, know how to
+              scale your organic growth
             </p>
 
             <div className="grid md:grid-cols-3 gap-8 mb-12">
@@ -254,11 +283,15 @@ export default function ResultsPage() {
                 <div className="text-gray-600">Client Satisfaction</div>
               </div>
               <div className="bg-white p-8 rounded-lg shadow-lg">
-                <div className="text-3xl font-bold text-green-600 mb-2">6 Months</div>
+                <div className="text-3xl font-bold text-green-600 mb-2">
+                  6 Months
+                </div>
                 <div className="text-gray-600">Average ROI Timeline</div>
               </div>
               <div className="bg-white p-8 rounded-lg shadow-lg">
-                <div className="text-3xl font-bold text-purple-600 mb-2">24/7</div>
+                <div className="text-3xl font-bold text-purple-600 mb-2">
+                  24/7
+                </div>
                 <div className="text-gray-600">Monitoring & Support</div>
               </div>
             </div>

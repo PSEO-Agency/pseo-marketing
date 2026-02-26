@@ -41,7 +41,7 @@ const slideTypeStyles: Record<string, { bg: string; accent: string; accentHsl: s
   },
   cta: {
     bg: 'from-orange-600 via-orange-500 to-amber-500',
-    accent: 'text-white',
+    accent: 'text-gray-900',
     accentHsl: '0 0% 100%'
   },
 };
@@ -110,7 +110,7 @@ export const CarouselSlide: React.FC<CarouselSlideProps> = ({ slide, className }
           )}
 
           <h2 className={cn(
-            'font-bold text-white mb-6 leading-tight tracking-tight',
+            'font-bold text-gray-900 mb-6 leading-tight tracking-tight',
             slide.type === 'cta' ? 'text-6xl' : 'text-7xl'
           )}>
             {slide.title}
@@ -130,10 +130,10 @@ export const CarouselSlide: React.FC<CarouselSlideProps> = ({ slide, className }
               {slide.bullets.map((bullet, index) => (
                 <li
                   key={index}
-                  className="flex items-start gap-5 text-2xl text-white/90"
+                  className="flex items-start gap-5 text-2xl text-gray-900/90"
                 >
                   <span className={cn(
-                    'flex-shrink-0 w-10 h-10 rounded-xl bg-white/10 backdrop-blur-sm flex items-center justify-center text-xl font-bold border border-white/20',
+                    'flex-shrink-0 w-10 h-10 rounded-xl bg-gray-50 backdrop-blur-sm flex items-center justify-center text-xl font-bold border border-gray-200',
                     styles.accent
                   )}>
                     {index + 1}
@@ -145,17 +145,17 @@ export const CarouselSlide: React.FC<CarouselSlideProps> = ({ slide, className }
           )}
         </div>
 
-        <div className="flex justify-between items-center pt-8 border-t border-white/10">
+        <div className="flex justify-between items-center pt-8 border-t border-gray-200">
           <div className="flex items-center gap-4">
-            <div className="w-12 h-12 rounded-xl bg-white/10 backdrop-blur-sm flex items-center justify-center border border-white/20">
+            <div className="w-12 h-12 rounded-xl bg-gray-50 backdrop-blur-sm flex items-center justify-center border border-gray-200">
               <span className="text-2xl">📊</span>
             </div>
             <div className="text-left">
-              <div className="font-bold text-white text-xl">pSEO Agency</div>
-              <div className="text-white/60 text-sm">Programmatic SEO Solutions</div>
+              <div className="font-bold text-gray-900 text-xl">pSEO Agency</div>
+              <div className="text-gray-900/60 text-sm">Programmatic SEO Solutions</div>
             </div>
           </div>
-          <div className="text-white/40 text-lg font-medium">
+          <div className="text-gray-900/40 text-lg font-medium">
             programmaticseo.agency
           </div>
         </div>

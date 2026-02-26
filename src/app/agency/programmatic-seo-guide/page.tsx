@@ -6,12 +6,7 @@ import Link from "next/link";
 import AgencyPageWrapper from "@/components/agency/AgencyPageWrapper";
 import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
-import {
-  Card,
-  CardContent,
-  CardHeader,
-  CardTitle,
-} from "@/components/ui/card";
+import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import {
   Accordion,
   AccordionContent,
@@ -47,8 +42,7 @@ const brandLogoMap: Record<string, string> = {
   webflow: "/lovable-uploads/fa25f460-907e-4f70-8915-7562025914b9.png",
   ahrefs: "/lovable-uploads/0f066707-7e1a-4e4c-b05c-b214c23387de.png",
   nextjs: "/lovable-uploads/4d23c728-c369-4186-929c-28700ba2da22.png",
-  "screaming-frog":
-    "/lovable-uploads/c6810a8c-a409-44c8-86c1-faa8d94ffaf1.png",
+  "screaming-frog": "/lovable-uploads/c6810a8c-a409-44c8-86c1-faa8d94ffaf1.png",
   "google-search-console":
     "/lovable-uploads/a8963a99-1d15-4a97-9b9b-23233418627e.png",
   semrush: "/lovable-uploads/40d526b8-0676-4044-9ef4-3111c6f880d7.png",
@@ -527,10 +521,7 @@ export default function ProgrammaticSEOGuidePage() {
                 {software.map((item) => {
                   const brandLogo = brandLogoMap[item.slug];
                   return (
-                    <Link
-                      key={item.id}
-                      href={`/agency/software/${item.slug}`}
-                    >
+                    <Link key={item.id} href={`/agency/software/${item.slug}`}>
                       <Card className="h-full hover:shadow-xl transition-all duration-300 group text-center cursor-pointer">
                         <CardHeader>
                           <div className="w-16 h-16 bg-white rounded-2xl shadow-lg flex items-center justify-center mx-auto mb-4 group-hover:scale-110 transition-transform duration-300 border border-gray-100">
@@ -743,10 +734,7 @@ export default function ProgrammaticSEOGuidePage() {
                         </div>
                         <div className="flex-1">
                           {blog.category && (
-                            <Badge
-                              variant="outline"
-                              className="mb-3 text-xs"
-                            >
+                            <Badge variant="outline" className="mb-3 text-xs">
                               {blog.category}
                             </Badge>
                           )}

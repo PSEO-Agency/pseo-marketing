@@ -21,18 +21,23 @@ interface SoftwareCardProps {
   featured?: boolean;
 }
 
-export const SoftwareCard = ({ software, featured = false }: SoftwareCardProps) => {
+export const SoftwareCard = ({
+  software,
+  featured = false,
+}: SoftwareCardProps) => {
   const tags = Array.isArray(software.tags) ? software.tags : [];
 
   const getItemUrl = () => {
-    if (software.type === 'tool') {
+    if (software.type === "tool") {
       return `/agency/tools/${software.slug}`;
     }
     return `/agency/software/${software.slug}`;
   };
 
   return (
-    <Card className={`group hover:shadow-xl transition-all duration-300 transform hover:-translate-y-1 ${featured ? 'border-2 border-blue-200 bg-gradient-to-br from-blue-50 to-purple-50' : 'hover:shadow-lg'}`}>
+    <Card
+      className={`group hover:shadow-xl transition-all duration-300 transform hover:-translate-y-1 ${featured ? "border-2 border-blue-200 bg-gradient-to-br from-blue-50 to-purple-50" : "hover:shadow-lg"}`}
+    >
       <CardContent className="p-0">
         <Link href={getItemUrl()} className="block">
           <div className="relative overflow-hidden rounded-t-lg bg-gradient-to-br from-blue-50 to-purple-50 h-48">
@@ -66,14 +71,18 @@ export const SoftwareCard = ({ software, featured = false }: SoftwareCardProps) 
                 {software.title}
               </h3>
               {software.category && (
-                <Badge variant="outline" className="text-xs text-blue-600 border-blue-200">
+                <Badge
+                  variant="outline"
+                  className="text-xs text-blue-600 border-blue-200"
+                >
                   {software.category}
                 </Badge>
               )}
             </div>
 
             <p className="text-gray-600 text-sm leading-relaxed mb-4 line-clamp-3">
-              {software.description || 'Professional tool for optimization and analysis.'}
+              {software.description ||
+                "Professional tool for optimization and analysis."}
             </p>
 
             <div className="flex items-center justify-between text-xs text-gray-500 mb-4 space-x-4">
@@ -100,7 +109,11 @@ export const SoftwareCard = ({ software, featured = false }: SoftwareCardProps) 
             {tags.length > 0 && (
               <div className="flex flex-wrap gap-1">
                 {tags.slice(0, 3).map((tag: string, index: number) => (
-                  <Badge key={index} variant="secondary" className="text-xs px-2 py-1">
+                  <Badge
+                    key={index}
+                    variant="secondary"
+                    className="text-xs px-2 py-1"
+                  >
                     {tag}
                   </Badge>
                 ))}

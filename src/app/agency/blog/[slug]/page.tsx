@@ -295,7 +295,8 @@ export default function BlogPostDetailPage() {
                   <div className="flex items-start">
                     <CheckCircle className="h-5 w-5 text-green-500 mt-1 mr-3 flex-shrink-0" />
                     <p className="text-gray-700">
-                      Data-driven content strategies outperform manual approaches
+                      Data-driven content strategies outperform manual
+                      approaches
                     </p>
                   </div>
                 </div>

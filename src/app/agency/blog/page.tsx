@@ -101,10 +101,7 @@ export default function BlogPage() {
                   </div>
                   <div className="grid lg:grid-cols-3 gap-8">
                     {allFeaturedPosts.map((post: any) => (
-                      <Link
-                        key={post.id}
-                        href={`/agency/blog/${post.slug}`}
-                      >
+                      <Link key={post.id} href={`/agency/blog/${post.slug}`}>
                         <article className="bg-white rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 group border border-gray-100 overflow-hidden hover:-translate-y-1">
                           <div className="p-8">
                             <div className="flex items-center justify-between mb-4">
@@ -130,9 +127,7 @@ export default function BlogPage() {
                             <div className="flex items-center justify-between">
                               <div className="flex items-center text-sm text-gray-500">
                                 <Clock className="h-4 w-4 mr-1" />
-                                <span>
-                                  {post.read_time || "5 min read"}
-                                </span>
+                                <span>{post.read_time || "5 min read"}</span>
                               </div>
                               <ArrowRight className="h-5 w-5 text-blue-600 group-hover:translate-x-1 transition-transform" />
                             </div>
@@ -174,10 +169,7 @@ export default function BlogPage() {
                 ) : (
                   <div className="grid lg:grid-cols-2 gap-8">
                     {blogPosts.map((post: any) => (
-                      <Link
-                        key={post.id}
-                        href={`/agency/blog/${post.slug}`}
-                      >
+                      <Link key={post.id} href={`/agency/blog/${post.slug}`}>
                         <article className="bg-white rounded-xl shadow-sm hover:shadow-lg transition-all duration-300 group border border-gray-100 overflow-hidden">
                           <div className="p-8">
                             <div className="flex items-center justify-between mb-4">
@@ -209,7 +201,7 @@ export default function BlogPage() {
                                     <Calendar className="h-4 w-4 mr-1" />
                                     <time dateTime={post.published_at}>
                                       {new Date(
-                                        post.published_at
+                                        post.published_at,
                                       ).toLocaleDateString("en-US", {
                                         year: "numeric",
                                         month: "short",

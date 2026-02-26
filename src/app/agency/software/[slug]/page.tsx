@@ -104,9 +104,7 @@ export default function SoftwareDetailPage() {
 
   const features = Array.isArray(software.features)
     ? (software.features as Record<string, unknown>[]).filter(
-        (
-          feature,
-        ): feature is { name: string; description: string } =>
+        (feature): feature is { name: string; description: string } =>
           typeof feature === "object" &&
           feature !== null &&
           typeof feature.name === "string" &&
@@ -154,9 +152,7 @@ export default function SoftwareDetailPage() {
       )
     : [];
 
-  const implementationExamples = Array.isArray(
-    software.implementation_examples,
-  )
+  const implementationExamples = Array.isArray(software.implementation_examples)
     ? (software.implementation_examples as Record<string, unknown>[]).filter(
         (
           example,

@@ -61,7 +61,10 @@ const benefits = [
 ];
 
 const perks = [
-  { icon: <Award className="h-5 w-5" />, text: "Industry-Leading Compensation" },
+  {
+    icon: <Award className="h-5 w-5" />,
+    text: "Industry-Leading Compensation",
+  },
   { icon: <Globe className="h-5 w-5" />, text: "100% Remote Flexibility" },
   { icon: <Zap className="h-5 w-5" />, text: "Latest Technology Stack" },
   { icon: <Users className="h-5 w-5" />, text: "Collaborative Culture" },
@@ -98,9 +101,9 @@ export default function JobsPage() {
               </span>
             </h1>
             <p className="text-xl lg:text-2xl text-blue-100 mb-12 max-w-3xl mx-auto leading-relaxed">
-              Join a team that&apos;s revolutionizing SEO through automation, AI, and scalable content
-              strategies. Help enterprise clients achieve exponential organic growth while advancing
-              your career.
+              Join a team that&apos;s revolutionizing SEO through automation,
+              AI, and scalable content strategies. Help enterprise clients
+              achieve exponential organic growth while advancing your career.
             </p>
             <div className="flex justify-center">
               <Button
@@ -124,18 +127,21 @@ export default function JobsPage() {
                 All Open Positions
               </h2>
               <p className="text-lg text-gray-600 max-w-2xl mx-auto">
-                Explore career opportunities across programmatic SEO, automation, data science, and
-                enterprise solutions
+                Explore career opportunities across programmatic SEO,
+                automation, data science, and enterprise solutions
               </p>
             </div>
 
             <Card className="text-center py-16 shadow-xl border-0">
               <CardContent>
                 <Building className="h-16 w-16 text-gray-400 mx-auto mb-6" />
-                <h3 className="text-2xl font-bold text-gray-900 mb-4">No Open Positions</h3>
+                <h3 className="text-2xl font-bold text-gray-900 mb-4">
+                  No Open Positions
+                </h3>
                 <p className="text-gray-600 mb-8 max-w-md mx-auto">
-                  We&apos;re not currently hiring, but we&apos;re always looking for exceptional talent.
-                  Send us your resume and we&apos;ll keep you in mind for future opportunities.
+                  We&apos;re not currently hiring, but we&apos;re always looking
+                  for exceptional talent. Send us your resume and we&apos;ll
+                  keep you in mind for future opportunities.
                 </p>
                 <Button asChild className="bg-blue-600 hover:bg-blue-700">
                   <Link href="/agency/contact">Send Resume</Link>
@@ -155,8 +161,8 @@ export default function JobsPage() {
                 Why Join Our Team?
               </h2>
               <p className="text-lg text-gray-600 max-w-2xl mx-auto">
-                We&apos;re building the future of SEO automation, and we believe in taking care of the
-                people who make it possible
+                We&apos;re building the future of SEO automation, and we believe
+                in taking care of the people who make it possible
               </p>
             </div>
 
@@ -170,8 +176,12 @@ export default function JobsPage() {
                     <div className="inline-flex items-center justify-center w-16 h-16 bg-gray-100 rounded-full mb-6 group-hover:scale-110 transition-transform duration-300">
                       {benefit.icon}
                     </div>
-                    <h3 className="text-xl font-bold text-gray-900 mb-4">{benefit.title}</h3>
-                    <p className="text-gray-600 leading-relaxed">{benefit.description}</p>
+                    <h3 className="text-xl font-bold text-gray-900 mb-4">
+                      {benefit.title}
+                    </h3>
+                    <p className="text-gray-600 leading-relaxed">
+                      {benefit.description}
+                    </p>
                   </CardContent>
                 </Card>
               ))}

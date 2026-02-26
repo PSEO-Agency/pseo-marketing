@@ -116,11 +116,7 @@ export default function SoftwareCollectionPage() {
 
               <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
                 {featuredSoftware.map((item) => (
-                  <SoftwareCard
-                    key={item.id}
-                    software={item}
-                    featured={true}
-                  />
+                  <SoftwareCard key={item.id} software={item} featured={true} />
                 ))}
               </div>
             </div>

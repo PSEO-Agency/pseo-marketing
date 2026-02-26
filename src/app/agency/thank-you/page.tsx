@@ -3,7 +3,14 @@ import Link from "next/link";
 import AgencyPageWrapper from "@/components/agency/AgencyPageWrapper";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
-import { CheckCircle2, Clock, ArrowRight, Star, MessageSquare, Calendar } from "lucide-react";
+import {
+  CheckCircle2,
+  Clock,
+  ArrowRight,
+  Star,
+  MessageSquare,
+  Calendar,
+} from "lucide-react";
 
 export const metadata: Metadata = {
   title: "Thank You - Your Request Has Been Received",
@@ -16,19 +23,22 @@ const nextSteps = [
   {
     icon: <Clock className="h-6 w-6 text-blue-600" />,
     title: "We'll Review Your Submission",
-    description: "Our team will analyze your requirements within 2 business hours",
+    description:
+      "Our team will analyze your requirements within 2 business hours",
     timeframe: "Within 2 hours",
   },
   {
     icon: <MessageSquare className="h-6 w-6 text-green-600" />,
     title: "Initial Response",
-    description: "You'll receive a personalized response with preliminary insights",
+    description:
+      "You'll receive a personalized response with preliminary insights",
     timeframe: "Same day",
   },
   {
     icon: <Calendar className="h-6 w-6 text-purple-600" />,
     title: "Strategy Session",
-    description: "Schedule your free consultation to discuss detailed recommendations",
+    description:
+      "Schedule your free consultation to discuss detailed recommendations",
     timeframe: "Within 24 hours",
   },
 ];
@@ -59,19 +69,24 @@ export default function ThankYouPage() {
               <CheckCircle2 className="h-10 w-10 text-green-600" />
             </div>
 
-            <h1 className="text-4xl lg:text-6xl font-bold text-gray-900 mb-6">Thank You!</h1>
+            <h1 className="text-4xl lg:text-6xl font-bold text-gray-900 mb-6">
+              Thank You!
+            </h1>
             <p className="text-xl text-gray-600 mb-8 leading-relaxed max-w-2xl mx-auto">
-              Your request has been successfully submitted. Our team of SEO experts will review your
-              information and get back to you shortly.
+              Your request has been successfully submitted. Our team of SEO
+              experts will review your information and get back to you shortly.
             </p>
 
             <div className="bg-white rounded-2xl shadow-lg p-6 border border-green-100 max-w-lg mx-auto">
               <div className="flex items-center justify-center mb-4">
                 <Clock className="h-5 w-5 text-blue-600 mr-2" />
-                <span className="text-blue-800 font-semibold">Response Time: Within 2 Hours</span>
+                <span className="text-blue-800 font-semibold">
+                  Response Time: Within 2 Hours
+                </span>
               </div>
               <p className="text-gray-600 text-sm">
-                Check your email for our initial response with preliminary insights and next steps.
+                Check your email for our initial response with preliminary
+                insights and next steps.
               </p>
             </div>
           </div>
@@ -99,7 +114,9 @@ export default function ThankYouPage() {
                     <div className="bg-blue-50 text-blue-800 text-sm font-medium px-3 py-1 rounded-full inline-block mb-4">
                       {step.timeframe}
                     </div>
-                    <h3 className="text-xl font-bold text-gray-900 mb-3">{step.title}</h3>
+                    <h3 className="text-xl font-bold text-gray-900 mb-3">
+                      {step.title}
+                    </h3>
                     <p className="text-gray-600">{step.description}</p>
                   </CardContent>
                 </Card>
@@ -123,13 +140,22 @@ export default function ThankYouPage() {
                   <CardContent className="p-8">
                     <div className="flex mb-4">
                       {[...Array(testimonial.rating)].map((_, i) => (
-                        <Star key={i} className="h-5 w-5 text-yellow-400 fill-current" />
+                        <Star
+                          key={i}
+                          className="h-5 w-5 text-yellow-400 fill-current"
+                        />
                       ))}
                     </div>
-                    <p className="text-gray-700 mb-6 italic">&ldquo;{testimonial.text}&rdquo;</p>
+                    <p className="text-gray-700 mb-6 italic">
+                      &ldquo;{testimonial.text}&rdquo;
+                    </p>
                     <div>
-                      <p className="font-semibold text-gray-900">{testimonial.author}</p>
-                      <p className="text-gray-600 text-sm">{testimonial.company}</p>
+                      <p className="font-semibold text-gray-900">
+                        {testimonial.author}
+                      </p>
+                      <p className="text-gray-600 text-sm">
+                        {testimonial.company}
+                      </p>
                     </div>
                   </CardContent>
                 </Card>
@@ -143,10 +169,12 @@ export default function ThankYouPage() {
       <section className="py-20 bg-white">
         <div className="container mx-auto px-4">
           <div className="max-w-2xl mx-auto text-center">
-            <h2 className="text-3xl font-bold text-gray-900 mb-6">While You Wait...</h2>
+            <h2 className="text-3xl font-bold text-gray-900 mb-6">
+              While You Wait...
+            </h2>
             <p className="text-lg text-gray-600 mb-8">
-              Explore our resources and learn more about how programmatic SEO can transform your
-              business.
+              Explore our resources and learn more about how programmatic SEO
+              can transform your business.
             </p>
 
             <div className="flex flex-col sm:flex-row gap-4 justify-center">

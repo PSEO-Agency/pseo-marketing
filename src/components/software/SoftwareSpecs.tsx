@@ -21,13 +21,12 @@ export const SoftwareSpecs = ({ software }: SoftwareSpecsProps) => {
     ? software.integration_capabilities
     : [];
 
-  const useCases = Array.isArray(software.use_cases)
-    ? software.use_cases
-    : [];
+  const useCases = Array.isArray(software.use_cases) ? software.use_cases : [];
 
-  const techSpecs = software.technical_specs && typeof software.technical_specs === 'object'
-    ? software.technical_specs as Record<string, any>
-    : {};
+  const techSpecs =
+    software.technical_specs && typeof software.technical_specs === "object"
+      ? (software.technical_specs as Record<string, any>)
+      : {};
 
   return (
     <section className="py-16 bg-gray-50">
@@ -52,13 +51,15 @@ export const SoftwareSpecs = ({ software }: SoftwareSpecsProps) => {
                             key={i}
                             className={`h-4 w-4 ${
                               i < Math.floor(software.user_rating!)
-                                ? 'text-yellow-500 fill-current'
-                                : 'text-gray-300'
+                                ? "text-yellow-500 fill-current"
+                                : "text-gray-300"
                             }`}
                           />
                         ))}
                       </div>
-                      <span className="font-semibold">{software.user_rating}</span>
+                      <span className="font-semibold">
+                        {software.user_rating}
+                      </span>
                     </div>
                   </div>
                 )}
@@ -66,13 +67,17 @@ export const SoftwareSpecs = ({ software }: SoftwareSpecsProps) => {
                 {software.review_count && (
                   <div className="flex items-center justify-between">
                     <span className="text-sm text-gray-600">Reviews</span>
-                    <span className="font-semibold">{software.review_count.toLocaleString()}</span>
+                    <span className="font-semibold">
+                      {software.review_count.toLocaleString()}
+                    </span>
                   </div>
                 )}
 
                 {software.popularity_score && (
                   <div className="flex items-center justify-between">
-                    <span className="text-sm text-gray-600">Popularity Score</span>
+                    <span className="text-sm text-gray-600">
+                      Popularity Score
+                    </span>
                     <div className="flex items-center gap-2">
                       <div className="w-20 h-2 bg-gray-200 rounded-full overflow-hidden">
                         <div
@@ -80,7 +85,9 @@ export const SoftwareSpecs = ({ software }: SoftwareSpecsProps) => {
                           style={{ width: `${software.popularity_score}%` }}
                         />
                       </div>
-                      <span className="font-semibold">{software.popularity_score}/100</span>
+                      <span className="font-semibold">
+                        {software.popularity_score}/100
+                      </span>
                     </div>
                   </div>
                 )}
@@ -97,12 +104,19 @@ export const SoftwareSpecs = ({ software }: SoftwareSpecsProps) => {
               <CardContent className="space-y-3">
                 {software.difficulty_level && (
                   <div className="flex items-center justify-between">
-                    <span className="text-sm text-gray-600">Difficulty Level</span>
-                    <Badge variant="outline" className={
-                      software.difficulty_level === 'Beginner' ? 'border-green-200 text-green-700' :
-                      software.difficulty_level === 'Intermediate' ? 'border-yellow-200 text-yellow-700' :
-                      'border-red-200 text-red-700'
-                    }>
+                    <span className="text-sm text-gray-600">
+                      Difficulty Level
+                    </span>
+                    <Badge
+                      variant="outline"
+                      className={
+                        software.difficulty_level === "Beginner"
+                          ? "border-green-200 text-green-700"
+                          : software.difficulty_level === "Intermediate"
+                            ? "border-yellow-200 text-yellow-700"
+                            : "border-red-200 text-red-700"
+                      }
+                    >
                       {software.difficulty_level}
                     </Badge>
                   </div>
@@ -124,7 +138,9 @@ export const SoftwareSpecs = ({ software }: SoftwareSpecsProps) => {
                       <Users className="h-4 w-4" />
                       Target Audience
                     </span>
-                    <span className="font-semibold">{software.target_audience}</span>
+                    <span className="font-semibold">
+                      {software.target_audience}
+                    </span>
                   </div>
                 )}
               </CardContent>
@@ -140,7 +156,11 @@ export const SoftwareSpecs = ({ software }: SoftwareSpecsProps) => {
                 <CardContent>
                   <div className="grid grid-cols-2 gap-3">
                     {useCases.map((useCase: string, index: number) => (
-                      <Badge key={index} variant="outline" className="justify-center py-2 px-3 text-center">
+                      <Badge
+                        key={index}
+                        variant="outline"
+                        className="justify-center py-2 px-3 text-center"
+                      >
                         {useCase}
                       </Badge>
                     ))}
@@ -157,7 +177,11 @@ export const SoftwareSpecs = ({ software }: SoftwareSpecsProps) => {
                 <CardContent>
                   <div className="flex flex-wrap gap-2">
                     {integrations.map((integration: string, index: number) => (
-                      <Badge key={index} variant="secondary" className="px-3 py-1">
+                      <Badge
+                        key={index}
+                        variant="secondary"
+                        className="px-3 py-1"
+                      >
                         {integration}
                       </Badge>
                     ))}
@@ -175,10 +199,12 @@ export const SoftwareSpecs = ({ software }: SoftwareSpecsProps) => {
                   {Object.entries(techSpecs).map(([key, value]) => (
                     <div key={key} className="flex items-start justify-between">
                       <span className="text-sm text-gray-600 capitalize">
-                        {key.replace(/_/g, ' ')}
+                        {key.replace(/_/g, " ")}
                       </span>
                       <span className="font-semibold text-right text-sm">
-                        {Array.isArray(value) ? value.join(', ') : String(value)}
+                        {Array.isArray(value)
+                          ? value.join(", ")
+                          : String(value)}
                       </span>
                     </div>
                   ))}

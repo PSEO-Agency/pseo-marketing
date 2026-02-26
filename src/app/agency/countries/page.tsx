@@ -356,29 +356,24 @@ function CountryCard({ country }: { country: Country }) {
           `Scale programmatic SEO in ${country.name} with our trusted local partner.`}
       </p>
 
-      {!isComingSoon &&
-        country.industries &&
-        country.industries.length > 0 && (
-          <div className="flex flex-wrap gap-2 mb-6">
-            {country.industries.slice(0, 3).map((industry, index) => (
-              <Badge
-                key={index}
-                variant="secondary"
-                className="bg-blue-50 text-blue-700 hover:bg-blue-100"
-              >
-                {industry}
-              </Badge>
-            ))}
-            {country.industries.length > 3 && (
-              <Badge
-                variant="secondary"
-                className="bg-gray-100 text-gray-600"
-              >
-                +{country.industries.length - 3} more
-              </Badge>
-            )}
-          </div>
-        )}
+      {!isComingSoon && country.industries && country.industries.length > 0 && (
+        <div className="flex flex-wrap gap-2 mb-6">
+          {country.industries.slice(0, 3).map((industry, index) => (
+            <Badge
+              key={index}
+              variant="secondary"
+              className="bg-blue-50 text-blue-700 hover:bg-blue-100"
+            >
+              {industry}
+            </Badge>
+          ))}
+          {country.industries.length > 3 && (
+            <Badge variant="secondary" className="bg-gray-100 text-gray-600">
+              +{country.industries.length - 3} more
+            </Badge>
+          )}
+        </div>
+      )}
 
       {isComingSoon ? (
         <Button
