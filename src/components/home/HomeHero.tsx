@@ -102,7 +102,7 @@ export default function HomeHero() {
 
   return (
     <section
-      className="h-screen w-full overflow-hidden relative select-none flex"
+      className="min-h-screen w-full overflow-hidden relative select-none flex flex-col md:flex-row"
       aria-label="Choose your path: Agency, Builder, or Core"
     >
       {modes.map((mode, index) => {
@@ -113,14 +113,10 @@ export default function HomeHero() {
             role="group"
             aria-label={`${mode.title}: ${mode.disabled ? "Coming soon" : mode.cta}`}
             tabIndex={0}
-            className="relative h-full flex flex-col items-center justify-center cursor-pointer outline-none focus-visible:ring-2 focus-visible:ring-white/60 focus-visible:ring-inset min-w-0"
+            className="relative min-h-0 flex-1 flex flex-col items-center justify-center cursor-pointer outline-none focus-visible:ring-2 focus-visible:ring-white/60 focus-visible:ring-inset min-w-0 border-b border-white/25 last:border-b-0 md:border-b-0 md:border-r md:border-white/25 last:md:border-r-0"
             style={{
               flex: isActive ? 1.8 : 1,
               background: isActive ? mode.activeBg : mode.idleBg,
-              borderRight:
-                index < modes.length - 1
-                  ? "1px solid rgba(255,255,255,0.25)"
-                  : undefined,
             }}
             initial={false}
             animate={{
